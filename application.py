@@ -36,6 +36,7 @@ def load_word2vec():
         vocab.set_vector(word, vector)
 
     print('Model loaded.')
+    print('Model loaded.')
 
     # print('Saving word2vec model to disk...')
     # nlp.to_disk('./models/word2vec')
