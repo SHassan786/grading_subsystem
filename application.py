@@ -32,7 +32,7 @@ def load_word2vec():
     vocab = nlp.vocab
 
     # Add vectors to spacy vocab
-    for word, vector in zip(word2vec_model.index_to_key, word2vec_model.vectors):
+    for word, vector in zip(word2vec_model.index_to_key[:100000], word2vec_model.vectors[:100000]):
         vocab.set_vector(word, vector)
 
     print('Model loaded.')
