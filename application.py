@@ -37,8 +37,8 @@ def load_word2vec():
 
     print('Model loaded.')
 
-    print('Saving word2vec model to disk...')
-    nlp.to_disk('./models/word2vec')
+    # print('Saving word2vec model to disk...')
+    # nlp.to_disk('./models/word2vec')
     
     return nlp
 
