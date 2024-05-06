@@ -51,7 +51,7 @@ def load_saved_word2vec():
     
     return nlp
 
-# nlp = load_word2vec()
+nlp = load_word2vec()
 # nlp = load_saved_word2vec()
 nltk.download('stopwords')  # Download the stopwords dataset if not already downloaded
 stop_words = set(stopwords.words('english'))  # Get the list of English stop words
