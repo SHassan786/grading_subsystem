@@ -51,10 +51,16 @@ def load_saved_word2vec():
     
     return nlp
 
-nlp = load_word2vec()
+# nlp = load_word2vec()
 # nlp = load_saved_word2vec()
 nltk.download('stopwords')  # Download the stopwords dataset if not already downloaded
 stop_words = set(stopwords.words('english'))  # Get the list of English stop words
+
+# Grade test API------ For testing purpose
+@app.route('/test123', methods=['GET'])
+def test123():
+    print("reachedddd")
+    return jsonify('correctness')
 
 # Grade test API------ For testing purpose
 @app.route('/test', methods=['POST'])
@@ -209,5 +215,5 @@ def calculate_grade(similarity_score, true_grade):
     
     
 if __name__ == '__main__':
-    app.run(host='0.0.0.0', port=80)
+    app.run(host='0.0.0.0', port=8000)
     
